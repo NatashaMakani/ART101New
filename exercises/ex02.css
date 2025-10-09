@@ -1,0 +1,26 @@
+p{
+    color: #f4e4f4; background: #ba70cf;
+    margin: 15px; padding:30px; border: 2px dashed #191133;
+    width: 300px; height: 15px;
+    display: block; 
+    font-size: 19px; font-family: 'Times New Roman', Times, serif;
+}
+
+test{
+    background: green;
+}
+
+.high1{
+    background: #c6a2bc;
+}
+
+#pkunk{
+    size-adjust: 20px;
+}
+
+#ucsc{
+    width: 500px
+}
+
+
+
