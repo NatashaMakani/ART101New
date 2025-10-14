@@ -1,7 +1,7 @@
 BODY {
     background: #f5e4a1; 
     padding: 50px;
-    background-image: url('img_env01_bg.png');
+    background-image: url('/images/img_env01_bg.png');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -15,5 +15,28 @@ p {
 }
 
 #hank {
-    width: 300px
+    width: 300px;
+}
+
+#lahdi {
+    width: 250px;
+}
+
+#grass {
+    width: 1000px;
+    margin: 0px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.gracias {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: stretch;
 }
