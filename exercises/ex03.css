@@ -1,9 +1,13 @@
 .test-div {
-background: pink;
-padding: 20px;
-margin: 20px;
+    background: pink;
+    padding: 20px;
+    margin: 20px;
 }
 
 .special {
-background: greenyellow
+    background: greenyellow
+}
+
+.my-flex {
+    display: flex;
 }
