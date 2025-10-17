@@ -1,7 +1,7 @@
 BODY {
     background: #f5e4a1; 
     padding: 50px;
-    background-image: url('/images/img_env01_bg.png');
+    background-image: url('../images/img_env01_bg.png');
     background-size: cover;
     background-attachment: fixed;
     background-repeat: no-repeat;
