@@ -22,7 +22,9 @@ let lahdiCharacter = {
 
 
 // ---Outputs---
-$("#output").append("Test!! TEST CASE! PLEASE SHOW UP!!!"); // My frustration is evident.
+$("#output").append("<p> Test!! TEST CASE! PLEASE SHOW UP!!! </p> "); // My frustration is evident.
+$("#output").append("<h2> and then...</h2>");
+$("#output").append("<p> the mango grew to be known as the best warrior mango in the kingdom of mangoes. </p>");
 
 // Locations
 let introductionLocation = "<p> You are currently standing in " + location + ".</p>";

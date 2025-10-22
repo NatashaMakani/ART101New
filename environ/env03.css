@@ -34,3 +34,7 @@ p {
     flex-wrap: nowrap;
     align-items: flex-end;
 }
+
+.output {
+    background: green
+}
