@@ -34,9 +34,3 @@ p {
     flex-wrap: nowrap;
     align-items: flex-end;
 }
-
-.outputLocation {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: stretch;
-}

@@ -1,9 +1,11 @@
 // ---Defines---
+// Variable
+let location = "the Aspen Forest"; 
 
-let location = "the Aspen Forest";
+// Array
+let inhabitants = ["YOU", "LIGHT ARRAY CREATURES", "BOUNDARYMEN", "HANK", "LAHDI"]; 
 
-let inhabitants = ["YOU", "LIGHT ARRAY CREATURES", "BOUNDARYMEN", "HANK", "LAHDI"];
-
+// Objects
 let hankCharacter = {
     name: "Hank",
     species: "Semi-robotic biped",
@@ -20,11 +22,11 @@ let lahdiCharacter = {
 
 
 // ---Outputs---
+$("#output").append("Test!! TEST CASE! PLEASE SHOW UP!!!"); // My frustration is evident.
 
 // Locations
 let introductionLocation = "<p> You are currently standing in " + location + ".</p>";
 
-$("#outputLocation").html(introductionLocation);
 $("#outputLocation").append(introductionLocation);
 
 // Inhabitants
