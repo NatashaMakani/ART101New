@@ -1,6 +1,10 @@
 let count = 0;
 let total_count = 0;
-let mood_array = ["Fresh and happy!", "Keep pushing!", "So tired!"]
+let mood_array = [
+    "Fresh and happy!", 
+    "Keep pushing!", 
+    "So tired!",
+]
 let mood = mood_array[0]
 let colours = ["Orchid", "Coral", "HotPink", "Plum"];
 

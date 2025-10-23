@@ -35,6 +35,16 @@ p {
     align-items: flex-end;
 }
 
-.output {
-    background: green
+.character-introduction {
+    background-color: #fffef9;
+    padding: 10px;
+    border: 4px;
+    border-color: #bc8a1d;
+}
+
+.location-details {
+    background-color: #eddeca;
+    padding: 5px;
+    border: 4px;
+    border-color: #bc8a1d;
 }

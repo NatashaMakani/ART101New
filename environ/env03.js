@@ -1,9 +1,9 @@
-// ---Defines---
 // Variable
-let location = "the Aspen Forest"; 
+let playerlocation = "the Aspen Forest"; 
 
 // Array
 let inhabitants = ["YOU", "LIGHT ARRAY CREATURES", "BOUNDARYMEN", "HANK", "LAHDI"]; 
+
 
 // Objects
 let hankCharacter = {
@@ -21,35 +21,36 @@ let lahdiCharacter = {
 };
 
 
-// ---Outputs---
-$("#output").append("<p> Test!! TEST CASE! PLEASE SHOW UP!!! </p> "); // My frustration is evident.
-$("#output").append("<h2> and then...</h2>");
-$("#output").append("<p> the mango grew to be known as the best warrior mango in the kingdom of mangoes. </p>");
 
+// ---Outputs---
+/*
+$("#output").html("<p> Test!! TEST CASE! PLEASE SHOW UP!!! </p> ");
+$("#output").append("<p> Test!! TEST CASE! PLEASE SHOW UP!!! </p> "); // My frustration is evident.
+*/
 // Locations
-let introductionLocation = "<p> You are currently standing in " + location + ".</p>";
+let introductionLocation = "You are currently standing in " + playerlocation;
 
 $("#outputLocation").append(introductionLocation);
 
 // Inhabitants
-let introductionInhabitants = "<p> Within " + location + 
-", the following inhabitants may be found: <br>" + inhabitants + "</p>";
-
+let introductionInhabitants = "Within " + playerlocation + 
+", the following inhabitants may be found: <br><br>";
+inhabitants.forEach(item => (introductionInhabitants += (item + " ")))
 $("#outputInhabitants").html(introductionInhabitants);
 
 // Hank
-let introductionHank = "<p> This is " + hankCharacter.name 
+let introductionHank = "This is " + hankCharacter.name 
 + ". He is a " + hankCharacter.species
-+ " standing at " + hankCharacter.height + " feet. <br>"
-+ "His favourite colour is: " + hankCharacter.fav_colour + "</p>";
++ ", standing at " + hankCharacter.height + " feet. <br>"
++ "His favourite colour is: " + hankCharacter.fav_colour;
 
 $("#outputHank").html(introductionHank);
 
 // Lahdi
-let introductionLahdi = "<p> This is " + lahdiCharacter.name 
+let introductionLahdi = "This is " + lahdiCharacter.name 
 + ". She is a " + lahdiCharacter.species
-+ " standing at " + lahdiCharacter.height + " feet. <br>"
-+ "Her favourite colour is: " + lahdiCharacter.fav_colour + "</p>";
++ ", standing at " + lahdiCharacter.height + " feet. <br>"
++ "Her favourite colour is: " + lahdiCharacter.fav_colour;
 
 $("#outputLahdi").html(introductionLahdi);
 
