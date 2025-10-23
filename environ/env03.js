@@ -4,7 +4,6 @@ let playerlocation = "the Aspen Forest";
 // Array
 let inhabitants = ["YOU", "LIGHT ARRAY CREATURES", "BOUNDARYMEN", "HANK", "LAHDI"]; 
 
-
 // Objects
 let hankCharacter = {
     name: "Hank",
@@ -20,13 +19,7 @@ let lahdiCharacter = {
     fav_colour: "Green",
 };
 
-
-
 // ---Outputs---
-/*
-$("#output").html("<p> Test!! TEST CASE! PLEASE SHOW UP!!! </p> ");
-$("#output").append("<p> Test!! TEST CASE! PLEASE SHOW UP!!! </p> "); // My frustration is evident.
-*/
 // Locations
 let introductionLocation = "You are currently standing in " + playerlocation;
 
@@ -53,4 +46,3 @@ let introductionLahdi = "This is " + lahdiCharacter.name
 + "Her favourite colour is: " + lahdiCharacter.fav_colour;
 
 $("#outputLahdi").html(introductionLahdi);
-
