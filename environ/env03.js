@@ -35,7 +35,7 @@ $("#outputLocation").append(introductionLocation);
 // Inhabitants
 let introductionInhabitants = "Within " + playerlocation + 
 ", the following inhabitants may be found: <br><br>";
-inhabitants.forEach(item => (introductionInhabitants += (item + " ")))
+inhabitants.forEach(item => (introductionInhabitants += (item + ", ")))
 $("#outputInhabitants").html(introductionInhabitants);
 
 // Hank
