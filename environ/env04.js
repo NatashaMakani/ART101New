@@ -33,7 +33,7 @@ let lacCharacter = {
 }
 
 let boundarymenCharacter = {
-    name: "Boundryman",
+    name: "Boundaryman",
     species: "Boundaryman",
     height: 17,
     fav_colour: "Seafoam Teal",
@@ -43,16 +43,33 @@ let boundarymenCharacter = {
 
 let quotes = [ 
     "<p> Plenty of strange beings inhabit these lands. They're quite bizarre, forgive the depths of my unconscious for that. This one is named Hank. I don't know what he is, but he looks quite goofy. The other is Lahdi, a librarian and cartographer.</p>",
-    "<p> The light arrays... I try not to go out here. It always felt like I didn't belong. </p>"
+    "<p> The light arrays... I try not to go out here. It always felt like I didn't belong. Like it's where the world ends; where it becomes unfinished. </p>"
+]
+
+let bgImages = [
+    '../images/img_env01_bg.png',
+    '../images/img_env02_bg.png',
+]
+
+let charimages = [
+    '../images/hank.png',
+    '../images/lahdi.png',
+    '../images/boundaryman.png',
+    '../images/lac.png',
 ]
 
 // --Functions--
 function walkAway () {
     if (playerlocation = "the Aspen Forest") {
         $('#debugOutput').html("Wandering")
-        playerlocation = "the Light Arrays"
-        inhabitants = ["LIGHT ARRAY CREATURES", "BOUNDARYMEN"]
-        //document.getElementById("BODY").style.backgroundImage="url(../images/img_env02_bg.png)";
+        playerlocation = "the Light Arrays";
+        inhabitants = ["LIGHT ARRAY CREATURES", "BOUNDARYMEN"];
+        $("BODY").css("background-image", "url(" + bgImages[1] + ")");
+    }
+    else {
+        playerlocation = "the Aspen Forest";
+        inhabitants = ["YOU", "LIGHT ARRAY CREATURES", "BOUNDARYMEN", "HANK", "LAHDI"];
+        $("BODY").css("background-image", "url(" + bgImages[0] + ")");
     }
 };
 
@@ -81,6 +98,8 @@ function applyOutput () {
     
     // Aspen Forest
     if (playerlocation == "the Aspen Forest") {
+        $("#imgOutput1").html("<img id= 'hank' src='" + charimages[0] + "'>")
+        $("#imgOutput2").html("<img id= 'lahdi' src='" + charimages[1] + "'>")
         $("#output1").html(introduceCharacter(hankCharacter));
         $("#output2").html(introduceCharacter(lahdiCharacter));
         $("#outputDescription").html(quotes[0])
@@ -88,23 +107,19 @@ function applyOutput () {
 
     //Light Arrays
     else if (playerlocation == "the Light Arrays") {
-        $("#output1").html(introduceCharacter(lacCharacter));
+        $("#imgOutput1").html("<img id= 'boundaryman' src='" + charimages[2] + "'>")
+        $("#imgOutput2").html("<img id= 'lac' src='" + charimages[3] + "'>")
+        $("#output1").html(introduceCharacter(boundarymenCharacter));
+        $("#output2").html(introduceCharacter(lacCharacter));
         $("#outputDescription").html(quotes[1])
     };
 }
 
 // ---Outputs---
 // Locations
-
-/* Might be getting at something here, but doesn't work yet.
-window.onload = function () {
-    console.log("Loaded.");
-    applyOutput()
-};
-*/
-$("#output1").html(introduceCharacter(hankCharacter));
-$("#output2").html(introduceCharacter(lahdiCharacter));
-$("#outputDescription").html(quotes[0])
+$("BODY").css("background-image", "url(" + bgImages[0] + ")")
+$("#debugOutput").html("TESTING TESTING TESTING")
+applyOutput();
 
 $("#Wander").click(function () {
     walkAway();
