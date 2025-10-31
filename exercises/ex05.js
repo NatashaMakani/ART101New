@@ -13,10 +13,13 @@ let coloursSize = colours.length;
 let colourCount
 $("body").append("<br>") // So orchids look nice and orderly.
 
+var audio = new Audio('../sound/hallelujah.mp3');
+
 //Functions
 function makeImage (imageName) {
     if(colours[count] == imageName){
         $("body").append("<img width=50 src='../images/" + imageName + ".png'>");
+        audio.play();
     };
 };
 
@@ -34,7 +37,6 @@ function moodyButton (){
 }
 function moodyCount (){
     count += 1;
-    console.log(count)
     total_count += 1;
 
     if (count >= colours.length) { 
@@ -60,6 +62,7 @@ $("#needy-button").click( function() {
     makeImage("Orchid")
     makeImage("Coral")
     moodyCount()
-
+    
+    
 });
 
