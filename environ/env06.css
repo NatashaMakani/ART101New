@@ -1,0 +1,52 @@
+BODY {
+    background: #f5e4a1; 
+    padding: 50px;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+p {
+    background-color: #eddeca;
+    padding: 10px;
+    border: 4px;
+    border-color: #bc8a1d;
+}
+
+#hank {
+    width: 300px;
+}
+
+#lahdi {
+    width: 250px;
+}
+
+#lac {
+    width: 500px;
+}
+
+#boundaryman {
+    width: 300px;
+}
+
+.flex-container {
+    display: flex;
+    flex-direction : row;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+}
+
+.character-introduction {
+    background-color: #fffef9;
+    padding: 10px;
+    border: 4px;
+    border-color: #bc8a1d;
+}
+
+.location-details {
+    background-color: #edd4ca;
+    padding: 10px;
+    border: 4px;
+    border-color: #bc8a1d;
+}

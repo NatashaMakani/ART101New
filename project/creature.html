@@ -21,8 +21,18 @@
 
     <div id="creature-form">
         <h2>Add a Creature</h2>
-        <div>Name: <input type=text id="crName"></div>
-        <div><button id="add-creature">Add Creature</button></div>
+        <div>Name: <input type=text id="crName"></div><br>
+        <div>Colour: <input id="crColour" type="color"> </div><br>
+        <div>Number of eyes: <input id="crEyesNumber" type="number" max="5" min="0" value = "#"></div><br>
+        <!-- <div>Body Shape: <input id="crBodyShape" type="string"</div> -->
+        <div>Body Shape: 
+            <select name="Body Shape" id="crBodyShape">
+                <option value='ellipse rx="50" ry="50" cx="50" cy="50"'>Circle</option>
+                <option value='polygon points="50,10 100,100 0,100"'>Triangle</option>
+                <option value='rect width="100" height="100"'>Square</option>
+            </select>
+        </div>
+        <div><button id="add-creature">Let it roam!</button></div>
     </div>
 
     <div id="creature-list">Creatures list here:<br></div>
