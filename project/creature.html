@@ -17,22 +17,23 @@
 
 <body>
    <!-- Main content goes here, inside BODY -->
-    <h1> Creatures Garden </h1>
+    <h1> 🌺 Creatures Garden 🌺 </h1>
 
     <div id="creature-form">
         <h2>Add a Creature</h2>
-        <div>Name: <input type=text id="crName"></div><br>
+        <div>Name: <input type=text id="crName" maxlength="10"></div><br>
         <div>Colour: <input id="crColour" type="color"> </div><br>
-        <div>Number of eyes: <input id="crEyesNumber" type="number" max="5" min="0" value = "#"></div><br>
+        <div>Number of eyes: <input id="crEyesNumber" type="number" max="5" min="0" value = "2"></div><br>
         <!-- <div>Body Shape: <input id="crBodyShape" type="string"</div> -->
         <div>Body Shape: 
             <select name="Body Shape" id="crBodyShape">
-                <option value='ellipse rx="50" ry="50" cx="50" cy="50"'>Circle</option>
-                <option value='polygon points="50,10 100,100 0,100"'>Triangle</option>
-                <option value='rect width="100" height="100"'>Square</option>
+                <option value='Circle'>Circle</option>
+                <option value='Triangle'>Triangle</option>
+                <option value='Square'>Square</option>
             </select>
         </div>
         <div><button id="add-creature">Let it roam!</button></div>
+        <div><input type="checkbox" id="crRandom" value=""> <label for="crRandom">Randomize!</label></div>
     </div>
 
     <div id="creature-list">Creatures list here:<br></div>

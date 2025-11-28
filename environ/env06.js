@@ -13,7 +13,8 @@ let hankCharacter = {
     fav_colour: "Blue",
     pronoun_subject: "He",
     pronoun_possessive: "His",
-    dialogue: "Blurp!"
+    dialogue: "Blurp!",
+    html_display: `<img id= 'hank' src='../images/hank.png'>`
 };
 
 let lahdiCharacter = {
@@ -23,7 +24,8 @@ let lahdiCharacter = {
     fav_colour: "Green",
     pronoun_subject: "She",
     pronoun_possessive: "Her",
-    dialogue: "Hello."
+    dialogue: "Hello.",
+    html_display: `<img id= 'lahdi' src='../images/lahdi.png'>`
 };
 
 let lacCharacter = {
@@ -33,7 +35,8 @@ let lacCharacter = {
     fav_colour: "beyond human perception",
     pronoun_subject: "It",
     pronoun_possessive: "Its",
-    dialogue: "*&%&*(^&**??"
+    dialogue: "*&%&*(^&**??",
+    html_display: `<img id= 'lac' src='../images/lac.png'>`
 }
 
 let boundarymenCharacter = {
@@ -43,7 +46,8 @@ let boundarymenCharacter = {
     fav_colour: "Seafoam Teal",
     pronoun_subject: "It",
     pronoun_possessive: "Its",
-    dialogue: "..."
+    dialogue: "...",
+    html_display: `<img id= 'boundaryman' src='../images/boundaryman.png'>`
 }
 
 let quotes = [ 
@@ -56,23 +60,15 @@ let bgImages = [
     '../images/img_env02_bg.png',
 ]
 
-let charimages = [
-    '../images/hank.png',
-    '../images/lahdi.png',
-    '../images/boundaryman.png',
-    '../images/lac.png',
-]
-
 
 // --Functions--
 function walkAway () {
-    if (playerlocation = "the Aspen Forest") {
-        $('#debugOutput').html("Wandering")
+    if (playerlocation == "the Aspen Forest") {
         playerlocation = "the Light Arrays";
         inhabitants = ["LIGHT ARRAY CREATURES", "BOUNDARYMEN"];
         $("BODY").css("background-image", "url(" + bgImages[1] + ")");
     }
-    else {
+    else if (playerlocation == "the Light Arrays") {
         playerlocation = "the Aspen Forest";
         inhabitants = ["YOU", "LIGHT ARRAY CREATURES", "BOUNDARYMEN", "HANK", "LAHDI"];
         $("BODY").css("background-image", "url(" + bgImages[0] + ")");
@@ -106,27 +102,28 @@ function applyOutput () {
     inhabitants.forEach(item => (introductionInhabitants += (item + ", ")))
     $("#outputInhabitants").html(introductionInhabitants);
 
-    
-    // Aspen Forest
-    if (playerlocation == "the Aspen Forest") {
-        $("#imgOutput1").html("<img id= 'hank' src='" + charimages[0] + "'>")
-        $("#imgOutput2").html("<img id= 'lahdi' src='" + charimages[1] + "'>")
-        $("#output1").html(introduceCharacter(hankCharacter));
-        $("#output2").html(introduceCharacter(lahdiCharacter));
-        currentCharacters = [hankCharacter, lahdiCharacter]
-        $("#outputDescription").html(quotes[0])
-    }
-
-    //Light Arrays
-    else if (playerlocation == "the Light Arrays") {
-        $("#imgOutput1").html("<img id= 'boundaryman' src='" + charimages[2] + "'>")
-        $("#imgOutput2").html("<img id= 'lac' src='" + charimages[3] + "'>")
-        $("#output1").html(introduceCharacter(boundarymenCharacter));
-        $("#output2").html(introduceCharacter(lacCharacter));
-        currentCharacters = [boundarymenCharacter, lacCharacter]
-        $("#outputDescription").html(quotes[1])
+    // Location Matcher
+    switch(playerlocation) {
+        case "the Aspen Forest":
+            currentCharacters = [hankCharacter, lahdiCharacter];
+            $("#outputDescription").html(quotes[0])
+            console.log(currentCharacters)
+        case "the Light Arrays":
+            currentCharacters = [boundarymenCharacter, lacCharacter];
+            $("#outputDescription").html(quotes[1])
+            console.log(currentCharacters)
+        default:
+            currentCharacters = []
+            console.log(currentCharacters)
+            break;
     };
-}
+
+    $("#imgOutput1").html(currentCharacters[0].html_display)
+    $("#imgOutput2").html(currentCharacters[1].html_display)
+    $("#output1").html(introduceCharacter(currentCharacters[0]));
+    $("#output2").html(introduceCharacter(currentCharacters[1]));
+
+};
 
 // ---Outputs---
 // Locations
